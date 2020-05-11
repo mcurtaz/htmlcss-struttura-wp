@@ -1,0 +1,80 @@
+/* css bonus. Ho posizionato header e footer fissi sopra e sotto con position fixed. Ho anche cambiato le larghezze dei blocchi della parte centrale in modo che i laterali abbiano larghezza fissa e quello centrale occupi la parte restante */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* header */
+
+header{
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* debug */
+  background-color: #f1f196;
+}
+/* clearfix */
+
+main::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* blocco centrale */
+
+main{
+  /* margini che evitano sopra e sotto che il contenuto venga coperto da header e footer */
+  margin: 95px 0px 95px;
+}
+
+.main-left, .main-center, .main-right{
+  float:left;
+}
+
+.main-left{
+  width: 300px;
+  /* debug */
+  background-color: #dd8fea;
+  height: 300px;
+}
+
+.main-center{
+  /* larghezza del blocco è 100% - larghezza blocco destro - margini di 15 a dx e sx - larghezza blocco destra */
+  width: calc(100% - 300px - 30px - 400px);
+  margin: 0 15px;
+  /* debug */
+  background-color: #872198;
+  height: 400px;
+}
+
+.main-right{
+  width: 400px;
+}
+
+/* i due div momentaneamente vuoti della parte destra del blocco. definiranno anche l'altezza del blocco main-right che li contiene */
+
+.main-right div{
+  width: 100%;
+  margin-bottom: 10px;
+  /* debug */
+  height: 150px;
+  background-color: #dd8fea;
+
+}
+
+/* footer */
+
+footer{
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  /* debug */
+  background-color: lightblue;
+}
