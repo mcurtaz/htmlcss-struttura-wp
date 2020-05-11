@@ -1,0 +1,68 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* header */
+
+header{
+  height: 120px;
+  /* debug */
+  background-color: #f1f196;
+}
+/* clearfix */
+
+main::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* blocco centrale */
+
+main{
+  margin: 15px 0px;
+}
+
+.main-left, .main-center, .main-right{
+  float:left;
+}
+
+.main-left{
+  width: 20%;
+  /* debug */
+  background-color: #dd8fea;
+  height: 300px;
+}
+
+.main-center{
+  width: 50%;
+  margin: 0 2%;
+  /* debug */
+  background-color: #872198;
+  height: 400px;
+}
+
+.main-right{
+  width: 26%;
+}
+
+/* i due div momentaneamente vuoti della parte destra del blocco. definiranno anche l'altezza del blocco main-right che li contiene */
+
+.main-right div{
+  width: 100%;
+  margin-bottom: 10px;
+  /* debug */
+  height: 150px;
+  background-color: #dd8fea;
+
+}
+
+/* footer */
+
+footer{
+  /* debug */
+  height: 120px;
+  background-color: lightblue;
+}
